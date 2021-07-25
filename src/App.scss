@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    user-select: none;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+    text-shadow: 0 0 0.5px grey;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    height: 100vh;
+    background: linear-gradient(45deg, #4acfff 0%, #4b9ab9 34%, #895ab4 90%);
+    background-size: 400% 400%;
+    animation: animate 30s ease infinite;
+    -webkit-animation: animate 30s ease infinite;
+};
+
+@-webkit-keyframes animate {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+};
+@keyframes animate { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+};
+
+#timerApp {
+    background: rgba(170, 170, 170, 0.2);
+    box-shadow: 0 0 2px rgb(99, 99, 99);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 66vw;
+    height: 85vh;
+    min-width: 300px;
+    min-height: 600px;
+    max-width: 600px;
+};
+
+.timeAdj {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 5vh 0 2vh 0;
+};
+
+.timeAdjCtrl {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    max-width: 200px;
+};
+
+.ctrlbtn {
+    width: 9vw;
+    cursor: pointer;
+};
+
+.ctrlbtn:hover {
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+};
+
+.ctrlbtn:active {
+    font-weight: normal;
+    text-shadow: 0 0 2px black;
+};
+
+.timer {
+    height: 300px;
+    text-align: center;
+    margin: 2.5vh 0;
+    
+    svg {
+        filter: drop-shadow(0 0 0.5px grey);
+    };
+};
+
+.timertxt {
+    transition: color 1s ease-in-out;
+};
+
+.prog-ring {
+    position: relative;
+    z-index: 0;
+};
+
+.prog-ring_circle {
+    transition: stroke-dashoffset 1s linear, stroke 1s linear;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+};
+
+#timer-label {
+    position: relative;
+    top: -210px;
+    font-size: 25px;
+    letter-spacing: 3px; 
+    z-index: 1;
+};
+
+#time-left {
+    position: relative;
+    top: -205px;
+    font-size: 60px;
+    letter-spacing: 3px;
+    z-index: 1;
+};
+
+.ctrlTimer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2.5vh 0;
+    letter-spacing: 3px;
+    text-align: center;
+};
+
+.ctrlTimerBtn {
+    padding: 1vh 0;
+    width: 20vw;
+    border: 1px solid white;
+    box-shadow: 0 0 0.5px grey;
+    border-radius: 7.5px;
+    cursor: pointer;
+    max-width: 150px;
+};
+
+.ctrlTimerBtn:hover {
+    font-weight: bold;
+    text-shadow: 0 0 1px white;
+    box-shadow: 0 0 1.5px white;
+};
+
+.ctrlTimerBtn:active {
+    font-weight: normal;
+    text-shadow: 0 0 1px black;
+    box-shadow: 0 0 1px black;
+};
+
+.sound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    
+    input {
+        width: 66%;
+        opacity: 0.85;
+        cursor: pointer;
+        max-width: 400px;
+    };
+    input:hover {
+        opacity: 1;
+    };
+};
+
+#vol-val {
+    opacity: 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+};
+
+.visible {
+    opacity: 0.95 !important;
+}
+
+p {
+    position: relative;
+    top: 1vh;
+    font-size: 12px;
+    padding: 0;
+    text-align: center;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+};
+
+p:hover {
+    opacity: 1;
+};
