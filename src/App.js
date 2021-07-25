@@ -296,7 +296,7 @@ const Adjustment = props => {
 
 const Timer = props => {
     const radius = props.radius - props.stroke * 2;
-    const circum = radius*2  * Math.PI;
+    const circum = radius*2 * Math.PI;
     const strokeDashoffset = -(1-props.ringProg)*circum;
     return (
         <div className="timer">
