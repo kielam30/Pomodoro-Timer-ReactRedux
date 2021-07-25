@@ -430,7 +430,7 @@ class TimerApp extends React.Component {
         elem.classList.toggle("visible");
     };
 
-    render () { //use timepaused? to change logo, button use png
+    render () { 
         const {sessionLength, breakLength, timerType, timerPaused,
             timer, volume, adjVol, ringProg} = this.props;
         return (         
