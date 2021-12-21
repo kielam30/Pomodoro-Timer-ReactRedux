@@ -108,7 +108,6 @@ const runSession = time => dispatch => {
                 });
                 j++;
                 dispatch(setRingProg(store.getState().timer+j));
-                console.log(store.getState().ringProg)
                 if (store.getState().timer <= 0 ){
                     j=0;
                     dispatch(runBreak(store.getState().breakLength*60+1));
